@@ -1,3 +1,58 @@
 <resources>
-    <string name="app_name">EssenciaVital</string>
+    <string name="app_name">TCC_ETEC</string>
+
+    <string name="texto_bem_vindo">Bem-Vindo Usuário</string>
+    <string name="texto_nome_de_usuario">Nome de Usuário:</string>
+    <string name="texto_senha_de_usuario">Senha:</string>
+    <string name="texto_hint_nome">Obs.: Sem espaços</string>
+    <string name="texto_botao_entrar">Entrar</string>
+    <string name="texto_botao_cadastrar">Cadastrar</string>
+
+    <string name="texto_cadastre_se">Cadastre-se:</string>
+    <string name="texto_email">Email:</string>
+    <string name="texto_confirmar_senha_de_usuario">Confirmar Senha:</string>
+
+    <string name="texto_saudacao">BEM-VINDO! \n Aqui no Essência Vital prezamos pela saúde de nossos usuários.</string>
+    <string name="texto_saudacao_2">O que você prefere? \n Responder um questionário para ter uma resposta mais acertiva sobre seu caso ou ir direto as receitas?</string>
+
+    <string name="texto_questionario">Questionário</string>
+    <string name="texto_receitas">Receitas</string>
+    <string name="introdução_receitas">Por você ter escolhido ir direto para as receitas, não conseguiremos lhe oferecer as melhores opções para seu caso.</string>
+    <string name="introdução_receitas2">Então, por enquanto, teremos algumas receitas veganas a sua disposição:</string>
+    <string name="opcao1">Salada de alface com tomate cereja, repolho roxo e beterraba</string>
+    <string name="opcao2">Salada de repolho, cenoura e beterraba</string>
+    <string name="opcao3">Salada mediterrânea de grão-de-bico</string>
+    <string name="lembrete">Agora, caso nenhuma dessas receitas lhe agradaram, recomendamos que responda nossos questionários, nos permitindo, assim, agradar seu paladar de maneira saudável.</string>
+
+    <string name="texto_botao_enviar">Enviar</string>
+    <string name="texto_perfil_geral">Perfil Geral</string>
+    <string name="questao_1_PG">Qual o seu objetivo com a alimentação?</string>
+    <string name="questao1PG_a">Perda de Peso</string>
+    <string name="questao1PG_b">Ganho de Massa Muscular</string>
+    <string name="questao1PG_c">Melhorar Saúde Intestinal</string>
+    <string name="questao1PG_d">Outro</string>
+    <string name="questao_2_PG">Você já segue ou tem interesse em algum estilo alimentar específico?</string>
+    <string-array name="spinner_PG">
+        <item>Dieta Mediterrânea</item>
+        <item>Carnívora</item>
+        <item>Low carb/ Cetogênica</item>
+        <item>Plant-based/ Vegetariana</item>
+        <item>Dieta cru</item>
+        <item>Não sigo nenhum específico</item>
+    </string-array>
+    <string name="texto_retricoes_alimentares">Restrições Alimentares</string>
+    <string name="questao_1_RA">Você possui alguma alergia alimentar diagnosticada?</string>
+    <string name="questao1RA_a">Sim</string>
+    <string name="questao1RA_b">Não</string>
+    <string name="questao_2_RA">Se sim, quais? (ex.: glúten, lactose, frutos do mar, oleaginosas)</string>
+    <string name="questao_3_RA">Tem alguma intolerância ou sensibilidade alimentar que evita?</string>
+    <string-array name="spinner_RA">
+        <item>Lactose</item>
+        <item>Glúten</item>
+        <item>Frutose</item>
+        <item>Cafeína</item>
+        <item>Outros</item>
+        <item>Não</item>
+    </string-array>
+    <string name="ver_receita">Ver Receita</string>
 </resources>
