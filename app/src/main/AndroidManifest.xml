@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EssenciaVital">
         <activity
+            android:name=".FLogica"
+            android:exported="false" />
+        <activity
+            android:name=".ELogicaReceitaVegana"
+            android:exported="false" />
+        <activity
+            android:name=".DLogicaQuestionario"
+            android:exported="false" />
+        <activity
+            android:name=".CLogicaBemVindo"
+            android:exported="false" />
+        <activity
+            android:name=".BLogicaCadastro"
+            android:exported="false" />
+        <activity
             android:name=".ALogicaLogin"
             android:exported="true">
             <intent-filter>

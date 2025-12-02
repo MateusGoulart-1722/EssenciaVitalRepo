@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class ALoginLogica extends AppCompatActivity {
+public class ALogicaLogin extends AppCompatActivity {
 
     Button botao_var;
     TextInputEditText usuario_var;
@@ -46,16 +46,16 @@ public class ALoginLogica extends AppCompatActivity {
             String senha = senha_var.getText().toString().trim();
 
             if(usuario.equals("admin") && senha.equals("1234")) {
-                Toast.makeText(ALoginLogica.this, "Login realizado com sucesso!",
+                Toast.makeText(ALogicaLogin.this, "Login realizado com sucesso!",
                         Toast.LENGTH_SHORT).show();
 
-                Intent mudar_tela_var = new Intent(ALoginLogica.this,
-                        CBemvindoLogica.class);
+                Intent mudar_tela_var = new Intent(ALogicaLogin.this,
+                        CLogicaBemVindo.class);
 
                 startActivity(mudar_tela_var);
 
             } else {
-                Toast.makeText(ALoginLogica.this, "Usuário ou senha inválidos",
+                Toast.makeText(ALogicaLogin.this, "Usuário ou senha inválidos",
                         Toast.LENGTH_SHORT).show();
             }
 
@@ -65,8 +65,8 @@ public class ALoginLogica extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent mudar_tela_var = new Intent(ALoginLogica.this,
-                        BCadastroDesignLogica.class);
+                Intent mudar_tela_var = new Intent(ALogicaLogin.this,
+                        BLogicaCadastro.class);
 
                 startActivity(mudar_tela_var);
 
@@ -76,5 +76,4 @@ public class ALoginLogica extends AppCompatActivity {
 
 
     }
-}
 }
