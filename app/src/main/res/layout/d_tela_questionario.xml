@@ -5,6 +5,94 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/forma_cor_gradiente_padrao"
     tools:context=".DLogicaQuestionario">
+
+    <TextView
+        android:id="@+id/txv_PG"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/texto_perfil_geral"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txv_questao_PG"
+        android:layout_width="375dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/questao_1_PG"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_PG" />
+
+    <RadioGroup
+        android:id="@+id/rdg_perguntas_PG"
+        android:layout_width="375dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_questao_PG">
+
+        <RadioButton
+            android:id="@+id/rdb_a_PG"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="@string/questao1PG_a"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rdb_b_PG"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="@string/questao1PG_b"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rdb_c_PG"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="@string/questao1PG_c"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rdb_d_PG"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="@string/questao1PG_d"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="76dp"
+        android:background="@color/cor_azul_royal"
+        android:text="@string/texto_botao_enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
