@@ -1,200 +1,264 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@drawable/forma_cor_gradiente_padrao">
+package com.example.essenciavital;
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="25dp">
+import android.os.Bundle;
+import android.view.View;
+import android.widget.*;
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
 
-        <TextView
-            android:id="@+id/titulo_receita1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Strogonoff de Grão-de-Bico 🍲"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="16dp"/>
+import com.google.android.material.textfield.TextInputEditText;
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/white"
-            android:layout_marginVertical="16dp"/>
+public class MainActivity extends AppCompatActivity {
 
-        <ImageView
-            android:id="@+id/imgReceita1"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/receita_vegana_1"
-            android:layout_marginBottom="16dp" />
+    /* ----------- TELAS (LAYOUTS) ------------ */
+    View telaLogin, telaCadastro, telaBemVindo, telaQuestionario, telaReceita;
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="
-🍛 Ingredientes:
-- Grão-de-bico cozido
-- Creme de soja
-- Molho de tomate
-- Cebola e alho
-- Champignon
-- Sal e páprica
+    /* ----------- LOGIN ------------ */
+    Button btnLogin, btnCadastrarLogin;
+    TextInputEditText usuarioLogin;
+    EditText senhaLogin;
 
-🥄 Modo de preparo:
-Refogue a cebola e o alho, adicione o grão-de-bico e o molho de tomate. Misture o creme de soja e os temperos. Finalize com champignon."
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp"/>
+    /* ----------- CADASTRO ------------ */
+    Button btnCadastrar;
+    TextInputEditText emailCadastro;
+    EditText usuarioCadastro, senhaCadastro, confSenhaCadastro;
 
-        <Button
-            android:id="@+id/btnProxima1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Próxima Receita ➡️"
-            android:background="@color/cor_azul_royal"
-            android:textColor="@android:color/white"/>
-    </LinearLayout>
-</ScrollView>
+    /* ----------- BEM VINDO ------------ */
+    Button btnQuestionario, btnReceitas;
 
+    /* ----------- QUESTIONÁRIO ------------ */
+    RadioGroup grupoPerg;
+    RadioButton rA, rB, rC, rD;
+    Button btnProx;
+    TextView txtPergunta;
 
+    int questaoAtual = 0;
 
+    String[] perguntas = {
+            "1. Qual sua pretensão com a dieta?",
+            "2. Como é seu almoço?",
+            "3. Como é sua janta?",
+            "4. Quer aumentar consumo de:",
+            "5. Você cozinha?"
+    };
 
+    String[][] alternativas = {
+            {"Perder peso", "Ganhar massa", "Alimentação saudável", "Vegana"},
+            {"Tradicional", "Lanches", "Não almoço", "Vegetais"},
+            {"Tradicional", "Lanches", "Não janto", "Vegetais"},
+            {"Carne vermelha", "Carne branca", "Verduras", "Legumes"},
+            {"Cozinho almoço", "Cozinho janta", "Ambos", "Não cozinho"}
+    };
 
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@drawable/forma_cor_gradiente_padrao">
+    /* ----------- RECEITAS ------------ */
+    Button btnVerQuest, btnReceita1, btnReceita2, btnReceita3;
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="25dp">
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main); // Layout único
 
-        <TextView
-            android:id="@+id/titulo_receita2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hambúrguer de Lentilha 🍔"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="16dp"/>
+        /* TELAS */
+        telaLogin = findViewById(R.id.telaLogin);
+        telaCadastro = findViewById(R.id.telaCadastro);
+        telaBemVindo = findViewById(R.id.telaBemVindo);
+        telaQuestionario = findViewById(R.id.telaQuestionario);
+        telaReceita = findViewById(R.id.telaReceita);
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/white"
-            android:layout_marginVertical="16dp"/>
+        /* LOGIN */
+        btnLogin = findViewById(R.id.btn_login);
+        btnCadastrarLogin = findViewById(R.id.btn_cadastrar);
+        usuarioLogin = findViewById(R.id.tie_nome);
+        senhaLogin = findViewById(R.id.enp_senha);
 
-        <ImageView
-            android:id="@+id/imgReceita2"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/receita_vegana_2"
-            android:layout_marginBottom="16dp" />
+        /* CADASTRO */
+        btnCadastrar = findViewById(R.id.btn_cadastrar2);
+        emailCadastro = findViewById(R.id.tie_email);
+        usuarioCadastro = findViewById(R.id.enp_nome);
+        senhaCadastro = findViewById(R.id.enp_csenha);
+        confSenhaCadastro = findViewById(R.id.enp_confsenha);
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="
-🍔 Ingredientes:
-- Lentilha cozida
-- Aveia em flocos
-- Alho e cebola
-- Sal e orégano
+        /* BEM VINDO */
+        btnQuestionario = findViewById(R.id.btn_questionario);
+        btnReceitas = findViewById(R.id.btn_receitas);
 
-🥄 Modo de preparo:
-Amasse a lentilha, misture os demais ingredientes até formar a massa. Modele os hambúrgueres e frite ou asse."
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp"/>
+        /* QUESTIONÁRIO */
+        grupoPerg = findViewById(R.id.rdg_perguntas_PG);
+        rA = findViewById(R.id.rdb_a_PG);
+        rB = findViewById(R.id.rdb_b_PG);
+        rC = findViewById(R.id.rdb_c_PG);
+        rD = findViewById(R.id.rdb_d_PG);
+        btnProx = findViewById(R.id.btn_enviar);
+        txtPergunta = findViewById(R.id.txv_questao_PG);
 
-        <Button
-            android:id="@+id/btnProxima2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Próxima Receita ➡️"
-            android:background="@color/cor_azul_royal"
-            android:textColor="@android:color/white"/>
-    </LinearLayout>
-</ScrollView>
+        /* RECEITAS */
+        btnVerQuest = findViewById(R.id.btnVerQuest);
+        btnReceita1 = findViewById(R.id.btn_verreceita1);
+        btnReceita2 = findViewById(R.id.btn_verreceita2);
+        btnReceita3 = findViewById(R.id.btn_verreceita3);
 
+        mostrarTela(telaLogin);
 
+        /* ------ LOGIN ------ */
+        btnLogin.setOnClickListener(v -> {
+            String usuario = usuarioLogin.getText().toString();
+            String senha = senhaLogin.getText().toString();
 
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@drawable/forma_cor_gradiente_padrao">
+            if (usuario.equals("admin") && senha.equals("1234")) {
+                Toast.makeText(this, "Login OK", Toast.LENGTH_SHORT).show();
+                mostrarTela(telaBemVindo);
+            } else {
+                Toast.makeText(this, "Dados inválidos", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="25dp">
+        btnCadastrarLogin.setOnClickListener(v -> mostrarTela(telaCadastro));
 
-        <TextView
-            android:id="@+id/titulo_receita3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mousse de Chocolate Vegana 🍫"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="16dp"/>
+        /* ------ CADASTRO ------ */
+        btnCadastrar.setOnClickListener(v -> {
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/white"
-            android:layout_marginVertical="16dp"/>
+            if (senhaCadastro.getText().toString().equals(confSenhaCadastro.getText().toString())) {
+                Toast.makeText(this, "Usuário cadastrado!", Toast.LENGTH_SHORT).show();
+                mostrarTela(telaBemVindo);
+            } else {
+                Toast.makeText(this, "Senhas diferentes", Toast.LENGTH_SHORT).show();
+            }
 
-        <ImageView
-            android:id="@+id/imgReceita3"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/receita_vegana_3"
-            android:layout_marginBottom="16dp" />
+        });
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="
-🍫 Ingredientes:
-- Abacate
-- Cacau em pó
-- Leite vegetal
-- Açúcar ou melado
+        /* ------ BEM VINDO ------ */
+        btnQuestionario.setOnClickListener(v -> {
+            questaoAtual = 0;
+            carregarQuestao();
+            mostrarTela(telaQuestionario);
+        });
 
-🥄 Modo de preparo:
-Bata tudo no liquidificador até ficar cremoso. Leve à geladeira por 1 hora."
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="20dp"/>
+        btnReceitas.setOnClickListener(v -> mostrarTela(telaReceita));
 
-        <Button
-            android:id="@+id/btnFinalizar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Finalizar 🍃"
-            android:background="@color/cor_azul_royal"
-            android:textColor="@android:color/white"/>
-    </LinearLayout>
-</ScrollView>
+        /* ------ QUESTIONARIO ------ */
+        btnProx.setOnClickListener(v -> {
+            if (questaoAtual < perguntas.length - 1) {
+                questaoAtual++;
+                carregarQuestao();
+            } else {
+                Toast.makeText(this, "Questionário finalizado!", Toast.LENGTH_SHORT).show();
+                mostrarTela(telaReceita);
+            }
+        });
 
+        /* ------ RECEITAS ------ */
+        btnVerQuest.setOnClickListener(v -> mostrarTela(telaQuestionario));
+    }
+
+    private void mostrarTela(View tela) {
+        telaLogin.setVisibility(View.GONE);
+        telaCadastro.setVisibility(View.GONE);
+        telaBemVindo.setVisibility(View.GONE);
+        telaQuestionario.setVisibility(View.GONE);
+        telaReceita.setVisibility(View.GONE);
+
+        tela.setVisibility(View.VISIBLE);
+    }
+
+    private void carregarQuestao() {
+        txtPergunta.setText(perguntas[questaoAtual]);
+        rA.setText(alternativas[questaoAtual][0]);
+        rB.setText(alternativas[questaoAtual][1]);
+        rC.setText(alternativas[questaoAtual][2]);
+        rD.setText(alternativas[questaoAtual][3]);
+
+        grupoPerg.clearCheck();
+    }
+}
+package com.example.essenciavital;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ELogicaReceitaVegana extends AppCompatActivity {
+
+    Button botaoQuest;
+    Button botaoReceita1, botaoReceita2, botaoReceita3;
+
+    TextView txtTituloReceita;
+    TextView txtConteudoReceita;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.e_tela_receita_vegana);
+
+        botaoQuest = findViewById(R.id.btnVerQuest);
+        botaoReceita1 = findViewById(R.id.btn_verreceita1);
+        botaoReceita2 = findViewById(R.id.btn_verreceita2);
+        botaoReceita3 = findViewById(R.id.btn_verreceita3);
+
+        txtTituloReceita = findViewById(R.id.txtTituloReceita);
+        txtConteudoReceita = findViewById(R.id.txtConteudoReceita);
+
+        // Receita padrão na tela
+        exibirReceita1();
+
+        // 👉 Botões das receitas
+        botaoReceita1.setOnClickListener(v -> exibirReceita1());
+        botaoReceita2.setOnClickListener(v -> exibirReceita2());
+        botaoReceita3.setOnClickListener(v -> exibirReceita3());
+
+        // 👉 Voltar para o questionário
+        botaoQuest.setOnClickListener(v -> {
+            finish(); // volta pra tela anterior (Questionário)
+        });
+    }
+
+    private void exibirReceita1() {
+        txtTituloReceita.setText("🥗 Salada Proteica Vegana");
+
+        txtConteudoReceita.setText(
+                "Ingredientes:\n" +
+                        "- Grão-de-bico cozido\n" +
+                        "- Tomate\n" +
+                        "- Pepino\n" +
+                        "- Limão\n" +
+                        "- Azeite\n\n" +
+
+                        "Modo de preparo:\n" +
+                        "Misture tudo, tempere com limão e azeite e sirva fria."
+        );
+    }
+
+    private void exibirReceita2() {
+        txtTituloReceita.setText("🍝 Macarrão Integral Vegano");
+
+        txtConteudoReceita.setText(
+                "Ingredientes:\n" +
+                        "- Macarrão integral\n" +
+                        "- Alho\n" +
+                        "- Molho de tomate\n" +
+                        "- Manjericão\n\n" +
+
+                        "Modo de preparo:\n" +
+                        "Cozinhe o macarrão e refogue o alho no molho de tomate."
+        );
+    }
+
+    private void exibirReceita3() {
+        txtTituloReceita.setText("🍔 Hambúrguer Vegano");
+
+        txtConteudoReceita.setText(
+                "Ingredientes:\n" +
+                        "- Lentilha cozida\n" +
+                        "- Aveia\n" +
+                        "- Alho\n" +
+                        "- Cebola\n\n" +
+
+                        "Modo de preparo:\n" +
+                        "Misture tudo, modele e frite sem óleo."
+        );
+    }
+}
