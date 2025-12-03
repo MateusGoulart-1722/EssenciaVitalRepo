@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/forma_cor_gradiente_padrao">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/titulo_receita1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Strogonoff de Grão-de-Bico 🍲"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            android:layout_marginVertical="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgReceita1"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/receita_vegana_1"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+🍛 Ingredientes:
+- Grão-de-bico cozido
+- Creme de soja
+- Molho de tomate
+- Cebola e alho
+- Champignon
+- Sal e páprica
+
+🥄 Modo de preparo:
+Refogue a cebola e o alho, adicione o grão-de-bico e o molho de tomate. Misture o creme de soja e os temperos. Finalize com champignon."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnProxima1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Próxima Receita ➡️"
+            android:background="@color/cor_azul_royal"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/forma_cor_gradiente_padrao">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/titulo_receita2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hambúrguer de Lentilha 🍔"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            android:layout_marginVertical="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgReceita2"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/receita_vegana_2"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+🍔 Ingredientes:
+- Lentilha cozida
+- Aveia em flocos
+- Alho e cebola
+- Sal e orégano
+
+🥄 Modo de preparo:
+Amasse a lentilha, misture os demais ingredientes até formar a massa. Modele os hambúrgueres e frite ou asse."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnProxima2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Próxima Receita ➡️"
+            android:background="@color/cor_azul_royal"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/forma_cor_gradiente_padrao">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/titulo_receita3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mousse de Chocolate Vegana 🍫"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            android:layout_marginVertical="16dp"/>
+
+        <ImageView
+            android:id="@+id/imgReceita3"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/receita_vegana_3"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+🍫 Ingredientes:
+- Abacate
+- Cacau em pó
+- Leite vegetal
+- Açúcar ou melado
+
+🥄 Modo de preparo:
+Bata tudo no liquidificador até ficar cremoso. Leve à geladeira por 1 hora."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finalizar 🍃"
+            android:background="@color/cor_azul_royal"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
+
