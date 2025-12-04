@@ -46,13 +46,23 @@
     <string name="questao1RA_b">Não</string>
     <string name="questao_2_RA">Se sim, quais? (ex.: glúten, lactose, frutos do mar, oleaginosas)</string>
     <string name="questao_3_RA">Tem alguma intolerância ou sensibilidade alimentar que evita?</string>
-    <string-array name="spinner_RA">
-        <item>Lactose</item>
-        <item>Glúten</item>
-        <item>Frutose</item>
-        <item>Cafeína</item>
-        <item>Outros</item>
-        <item>Não</item>
-    </string-array>
     <string name="ver_receita">Ver Receita</string>
+    <string name="receita">Receitas</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="preparo">Modo de Preparo</string>
+    <string name="ray_peat">Por que é "Ray Peat"?</string>
+    <string name="receita_nome_1">Pudim de Coco Gelado</string>
+    <string name="ingred_receita_1_a">1 xícara de leite de coco integral</string>
+    <string name="ingred_receita_1_b">1 xícara de leite de arroz ou suco de maçã natural</string>
+    <string name="ingred_receita_1_c">2 colheres de sopa de amido de tapioca</string>
+    <string name="ingred_receita_1_d">1 colher de sopa de açúcar ou melado (opcional)</string>
+    <string name="ingred_receita_1_e">1/2 colher de chá de baunilha</string>
+    <string name="ingred_receita_1_f">Pitadinha de sal</string>
+    <string name="preparo_receita_1_a">Misture tudo na panela antes de ligar o fogo.</string>
+    <string name="preparo_receita_1_b">Ligue em fogo baixo e mexa até engrossar (3–5 min).</string>
+    <string name="preparo_receita_1_c">Coloque em potinhos e leve à geladeira por 1 hora.</string>
+    <string name="pq_raypeat_receita1_a">Zero PUFA</string>
+    <string name="pq_raypeat_receita1_b">Fácil digestão</string>
+    <string name="pq_raypeat_receita1_c">Rico em carboidratos leves</string>
+    <string name="pq_raypeat_receita1_d">Leite vegetal leve + coco (saturado)</string>
 </resources>

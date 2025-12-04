@@ -38,5 +38,12 @@ public class ELogicaReceitaVegana extends AppCompatActivity {
                 startActivity(mudar_tela_var);
             }
         });
+        botao_var_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mudar_tela_var_2 = new Intent(ELogicaReceitaVegana.this, FLogicaReceitas.class);
+                startActivity(mudar_tela_var_2);
+            }
+        });
     }
 }

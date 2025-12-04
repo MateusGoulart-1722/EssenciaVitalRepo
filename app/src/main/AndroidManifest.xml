@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EssenciaVital">
         <activity
-            android:name=".FLogica"
+            android:name=".FLogicaReceitas"
             android:exported="false" />
         <activity
             android:name=".ELogicaReceitaVegana"

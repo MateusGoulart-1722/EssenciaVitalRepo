@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/forma_cor_gradiente_padrao"
+    tools:context=".FLogicaReceitas">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="24dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txv_receitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/receita"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="24dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txvPudim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/receita_nome_1"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/pudim_de_coco" />
+
+            <TextView
+                android:id="@+id/txv_ingredientes_pudim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredientes"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txv_ingredientes_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingred_receita_1_a"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_ingredientes_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingred_receita_1_b"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_ingredientes_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingred_receita_1_c"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_ingredientes_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingred_receita_1_d"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_ingredientes_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingred_receita_1_e"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_ingredientes_f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingred_receita_1_f"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="24dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txv_preparo_pudim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preparo"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txv_preparo_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preparo_receita_1_a"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_preparo_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preparo_receita_1_b"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_preparo_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preparo_receita_1_c"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="24dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txv_raypeat_pudim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ray_peat"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txv_raypeat_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pq_raypeat_receita1_a"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_raypeat_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pq_raypeat_receita1_b"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_raypeat_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pq_raypeat_receita1_c"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/txv_raypeat_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pq_raypeat_receita1_d"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="24dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
